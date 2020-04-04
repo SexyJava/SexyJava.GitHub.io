@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/4 | CodeLiu的博客</title>
+  <title>Redis | CodeLiu的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java小白">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CodeLiu的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2020/04/index.html">
+  <meta name="description" content="Redis 关系型数据库(sql):  mysql,oracle  特点:数据和数据之间,表和字段之间  部门表 员工id:001,员工表 id : 001 用户表  用户名,密码 分类表和 商品表,一对多  优点:1.数据之间有关系,进行数据的crud非常方便2.关系型数据库有事务操作,保证数据的完整性  缺点:1.因为数据和数据之间有关系的,是由底层大量算法保证的,大量算法会拉低系统的运行速度">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Redis">
+<meta property="og:url" content="http://yoursite.com/2020/04/05/Redis/index.html">
 <meta property="og:site_name" content="CodeLiu的博客">
-<meta property="og:description" content="Java小白">
+<meta property="og:description" content="Redis 关系型数据库(sql):  mysql,oracle  特点:数据和数据之间,表和字段之间  部门表 员工id:001,员工表 id : 001 用户表  用户名,密码 分类表和 商品表,一对多  优点:1.数据之间有关系,进行数据的crud非常方便2.关系型数据库有事务操作,保证数据的完整性  缺点:1.因为数据和数据之间有关系的,是由底层大量算法保证的,大量算法会拉低系统的运行速度">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-04T16:11:36.882Z">
+<meta property="article:modified_time" content="2019-10-13T12:04:02.000Z">
 <meta property="article:author" content="CodeLiu">
 <meta name="twitter:card" content="summary">
   
@@ -138,157 +140,671 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Redis" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/05/virtualBox+Centos7+docker+Redis/" class="archive-article-date">
-  	<time datetime="2020-04-04T16:11:36.887Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-05</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/05/virtualBox+Centos7+docker+Redis/">virtualBox+Centos7+docker+Redis</a>
+    <h1 class="article-title" itemprop="name">
+      Redis
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/05/springboot+redis%E7%BC%93%E5%AD%98/" class="archive-article-date">
-  	<time datetime="2020-04-04T16:11:36.884Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/05/springboot+redis%E7%BC%93%E5%AD%98/">springboot+redis缓存</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/05/Redis/" class="archive-article-date">
+        
+        <a href="/2020/04/05/Redis/" class="archive-article-date">
   	<time datetime="2020-04-04T16:11:36.882Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-05</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/05/Redis/">Redis</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><ol>
+<li><p>关系型数据库(sql):</p>
+<ul>
+<li><p>mysql,oracle</p>
+</li>
+<li><p>特点:数据和数据之间,表和字段之间</p>
+</li>
+<li><p>部门表 员工id:001,员工表 id : 001</p>
+<p>用户表  用户名,密码</p>
+<p>分类表和 商品表,一对多</p>
+</li>
+<li><p>优点:1.数据之间有关系,进行数据的crud非常方便2.关系型数据库有事务操作,保证数据的完整性</p>
+</li>
+<li><p>缺点:1.因为数据和数据之间有关系的,是由底层大量算法保证的,大量算法会拉低系统的运行速度,大量算法会消耗系统资源2.海量数据的crud时会显得无能为力.很可能宕机.3.海量数据环境下对数据表进行维护,也很不便</p>
+</li>
+<li><p>适合处理一般量级数据,安全.</p>
+</li>
+</ul>
+</li>
+<li><p>非关系型数据库(nosql):为了处理海量数据,需要将关系型数据库的关系去掉,设计之初是为了替代关系型数据库</p>
+<ul>
+<li>Redis</li>
+<li>优点:1.海量数据的增删改查,非常轻松应对2.海量数据的维护非常轻松2.是完全开源免费的,遵守BSD协议,是一个高性能(NoSQL)的key-value数据库</li>
+<li>缺点:1.  数据和数据之间没有关系,所以不能一目了然  2.  非关系型数据库,没有关系,没有强大的事务保证数据的完整和安全</li>
+<li>适合处理海量数据,效率,不一定安全.</li>
+</ul>
+</li>
+<li><p>开发:关系型数据库+非关系型数据库共同支撑一个项目,重要的数据放在关系型数据库里,不重要的经常查询的放在关系型数据里</p>
+</li>
+<li><p>使用环境:1.  作为关系型数据的缓存存在.  2.  任务队列  3.  大量数据运算(比如取两个大量数据的交集)  4.  排行榜</p>
+</li>
+<li><p>Redis安装;推荐安装在LInux上</p>
+<ul>
+<li><p>因为Redis是c语言开发的,所以需要提供gcc环境</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install gcc-c++</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>Redis数据类型</p>
+<ul>
+<li>redis使用的是键值对保存数据(map).</li>
+<li>key:全部都是字符串(key名自定义,不要过长否则影响使用效率,key查询时先从最短的开始查)</li>
+<li>value:有五种数据类型(String,hash(和json类似),list(LinkedList链表添加删除效率高),set集合(hashset),有序的set集合)</li>
+</ul>
+</li>
+<li><p>redis命令-string命令</p>
+<p>字符串类型是redis中最为基础和常用的数据存储类型,字符串在redis中是<strong>二进制安全</strong>的,这便意味着该类型存入和获取的数据相同.在redis中字符串类型的value最多可以容纳的数据长度为512M.</p>
+<p>(</p>
+<p>​    mysql:关系型数据库,二进制不安全,如果编码表不同会产生乱码</p>
+<p>​    redis:非关系型数据库,二进制安全,服务器端不会进行编解码只在客户端编解码,只会传递二进制数据</p>
+<p>)</p>
+<ul>
+<li>赋值(更改)操作:<ul>
+<li>语法:set key value;</li>
+<li>如果赋予同一个key不同的value,新value会覆盖老的value</li>
+</ul>
+</li>
+<li>取值操作:<ul>
+<li>语法:get key</li>
+<li>如果与该key进行关联的value不是String类型,redis会报错,因为get key命令只能用于获取String类型的value.如果key不存在,则返回nil</li>
+</ul>
+</li>
+<li>删除操作:<ul>
+<li>语法:del key</li>
+<li>返回值是数据类型,表示删了几条数据</li>
+</ul>
+</li>
+<li>获取并赋值操作:<ul>
+<li>语法:getset key value </li>
+</ul>
+</li>
+<li>数值增减操作:<ul>
+<li>语法:incr key</li>
+<li>将指定的key的value原子性的递增1,如果该key不存在,其初始值为0,在incr之后其值为1,如果value的值不能转换成整形,如hello,该操作将执行失败并返回相应的错误信息(常用作计数器)</li>
+<li>语法:decr key</li>
+<li>将指定的key的value原子性的递减1,如果该key不存在,其初始值为0,在incr之后其值为-1,如果value的值不能转换成整形,如hello,该操作将执行失败并返回相应的错误信息(常用作计数器)</li>
+</ul>
+</li>
+<li>拼接字符串:<ul>
+<li>语法:append key value</li>
+<li>拼凑字符串,如果该key存在,则在原有的value后追加该值,如果不存在则重新创建一个key value</li>
+</ul>
+</li>
+<li>将数字值自增任意值<ul>
+<li>语法:incrby key increment</li>
+<li>将指定的key的value原子性的递增increment,如果该key不存在,其初始值为0,在incr之后其值为increment,如果value的值不能转换成整形,如hello,该操作将执行失败并返回相应的错误信息(常用作计数器)</li>
+</ul>
+</li>
+<li>将数字值自减任意值<ul>
+<li>语法:decrby key decrement</li>
+<li>将指定的key的value原子性的递减increment,如果该key不存在,其初始值为0,在incr之后其值为-increment,如果value的值不能转换成整形,如hello,该操作将执行失败并返回相应的错误信息(常用作计数器)</li>
+</ul>
+</li>
+<li>String使用环境:<ul>
+<li>主要用于保存json格式的字符串</li>
+<li>扩展:flushdb命令,会刷新数据库删除所有的键值对</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>redis命令-hash</p>
+<p>Redis中的hsh类型可以看成具有String key 和String value的map容器,所以该类型非常适合存储值对象的信息.hash—&gt;{username:”张三”,age:”18”,sex:”男”}——&gt;javabean</p>
+<ul>
+<li>特点:占用的磁盘空间极少存储同一个javabeanhash要比String占用的磁盘空间少很多</li>
+<li>赋值操作<ul>
+<li>语法:hset key field value</li>
+<li>为指定的key设定field/value对(键值对)</li>
+<li>语法:hmset key field value field2 value2 …</li>
+<li>设置key中的多个键值对</li>
+</ul>
+</li>
+<li>取值操作<ul>
+<li>语法:hget key field</li>
+<li>返回指定key 中的filed的值</li>
+<li>语法:hmget key field field2</li>
+<li>返回指定key中的多个field的值</li>
+<li>语法:hgetall key</li>
+<li>返回指定key中的所有field value</li>
+</ul>
+</li>
+<li>删除操作<ul>
+<li>语法:hel key field field2</li>
+<li>可以删除一个或多个字段,返回值是删除的字段个数</li>
+<li>语法:del key</li>
+<li>删除整个hash</li>
+</ul>
+</li>
+<li>增加数字操作<ul>
+<li>语法:hincrby key filed increment</li>
+<li>设置key中field的值增加increment</li>
+</ul>
+</li>
+<li>自学命令<ul>
+<li>语法:hexists key field</li>
+<li>判断指定的key中的field是否存在</li>
+<li>语法:hlen key</li>
+<li>返回指定的key中包含多少个字段</li>
+<li>语法:hkeys key</li>
+<li>获得所有字段</li>
+<li>语法:hvals key</li>
+<li>获得所有的value</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>redis-LinkedList命令</p>
+<p>java List: 数组ArrayList(有索引查询快) 链表 LinkedList(无索引查询慢,插入删除块)</p>
+<p>为什么redis选取了链表?redis做的操作最多的是进行元素的增删</p>
+<ul>
+<li><p>使用环境:1.  做大数据集合的增删.  2.  任务队列</p>
+</li>
+<li><p>赋值操作:</p>
+<ul>
+<li><p>语法:lpush key value1 value2 …                           </p>
+</li>
+<li><p>为指定的key从左侧插入value值</p>
+</li>
+<li><p>语法:rpush key value value2 …</p>
+</li>
+<li><p>为指定的key从右侧插入value值 </p>
+</li>
+</ul>
+</li>
+<li><p>查询操作:</p>
+<ul>
+<li>语法:lrange key start end</li>
+<li>获取链表中从start到end元素的值,start,end从0开始计数,也可以为负数,若为-1,则表示链表尾部的元素,-2表示倒数第二个,依次类推</li>
+</ul>
+</li>
+<li><p>删除操作:</p>
+<ul>
+<li>语法:lpop key</li>
+<li>返回弹出指定的key关联的链表中的第一个元素,即头部元素,如果该key不存在返回nil,若key存在返回链表的头部元素</li>
+<li>语法:rpop key</li>
+<li>从尾部弹出元素</li>
+</ul>
+</li>
+<li><p>扩展命令</p>
+<ul>
+<li>语法:llen key</li>
+<li>返回指定key关联的链表中的元素个数</li>
+<li>语法:lrem key count value</li>
+<li>删除count个值为value的元素,如果count大于0则从头向尾遍历并删除count个值为value的元素,如果count小于0则从尾向头遍历并删除,如果count等于0,则删除链表中所有等于value的元素</li>
+<li>语法:lset key index value </li>
+<li>设置链表中的index的角标的元素值,0代表链表的头元素,-1代表元素的尾元素,操作的角标不存在则抛出异常</li>
+<li>语法:linset key before|after pivot value</li>
+<li>在pivot元素前或者后插入value这个元素</li>
+<li><strong>语法:rpoplpush resource destination</strong></li>
+<li>将resource链表中的尾部元素弹出并添加到destination链表头部.(循环操作,任务队列),如果要做循环队列,只需要rpoplpush 操作同一个链表即可</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>redis-set</p>
+<p>java中hashset 无序且不重复,redis操作中,涉及到两个大数据集合的并集,交集,差集运算</p>
+<ul>
+<li>赋值操作<ul>
+<li>语法:<strong>sadd key value value2….</strong></li>
+<li>向set中添加一个或多个数据,如果指定key中已有value元素,则不会重复添加,返回成功添加的条数</li>
+</ul>
+</li>
+<li>取值操作<ul>
+<li>语法:<strong>smembers key</strong></li>
+<li>获取指定key的set集合中所有成员</li>
+<li>语法:<strong>sismember key member</strong></li>
+<li>判断参数中指定的成员是否存在该set中,1表示存在,0表示不存在,或者key本身就不存在(速度极快)</li>
+</ul>
+</li>
+<li>删除操作<ul>
+<li>语法:<strong>srem key members  member2</strong></li>
+<li>删除一个或多个指定key的set集合中的member元素</li>
+</ul>
+</li>
+<li>差集操作<ul>
+<li>语法:sdiff key1 key2 …</li>
+<li>返回指定key1与key2中相差的成员,而且与<strong>key的顺序有关</strong>,即返回差集,语义就是属于key1但不属于key2</li>
+</ul>
+</li>
+<li>交集操作<ul>
+<li>语法:sinter key1 key2 …</li>
+<li>返回多个key指定set集合的交集</li>
+</ul>
+</li>
+<li>并集操作<ul>
+<li>语法:sunion key1 key2 …</li>
+<li>返回并集</li>
+</ul>
+</li>
+<li>扩展命令<ul>
+<li><strong>语法:scard key</strong></li>
+<li><strong>获取key指定的set集合中元素的数量</strong></li>
+<li><strong>语法:srandmember key</strong></li>
+<li><strong>随机返回key指定的set集合中的一个元素</strong></li>
+<li><strong>语法:sdiffstore destination key1 key2</strong></li>
+<li><strong>将key指定的set集合做差集并保存到destination上</strong></li>
+<li><strong>语法:sinterstore destination key1 key2</strong></li>
+<li><strong>将key指定的set集合做交集并保存到destination上</strong></li>
+<li><strong>语法:sunionstore destination key1 key2</strong></li>
+<li><strong>将key指定的set集合做并集并保存到destination上</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>redis-有序set(排行榜)</p>
+<ul>
+<li>赋值操作<ul>
+<li>语法:zadd key score member score2 member2</li>
+<li>将所有成员以及该成员的分数存放到sorted-set中,如果该成员已存在,则会用新的分数替换原有的分数,返回值是新加入到集合中的成员个数,不包含之前以及存在的元素(默认排序由小到大)</li>
+</ul>
+</li>
+<li>查询操作<ul>
+<li>语法:zscore key member</li>
+<li>返回指定集合中的成员分数</li>
+<li>语法:zcard key</li>
+<li>返回集合中成员的数量</li>
+</ul>
+</li>
+<li>删除操作<ul>
+<li>语法:zrem key member</li>
+<li>删除集合中指定的成员,一个或多个</li>
+<li>语法:zcard key</li>
+<li>删除集合中的全部成员</li>
+</ul>
+</li>
+<li>范围查询操作<ul>
+<li>语法:<strong>zrange key start end [withscores]</strong></li>
+<li>获取集合中角标为start-end的成员,withscores参数表示返回成员的分数</li>
+<li>语法:<strong>zrevrange key start end [withscores]</strong></li>
+<li>倒序获取集合中角标为start-end的成员,withscores参数表示返回成员的分数</li>
+</ul>
+</li>
+<li>范围删除操作<ul>
+<li>语法:zremrangebyrank key start stop</li>
+<li>按照排名范围删除,start stop代表成员索引</li>
+<li>语法:zremrangebyscore key min max</li>
+<li>按照分数范围删除</li>
+</ul>
+</li>
+<li>扩展命令<ul>
+<li>语法:zrangebyscore key min max [withscores] limit start num</li>
+<li>返回分数范围内的从start开始的num个成员</li>
+<li>语法:zincrby key increment member</li>
+<li>设置指定成员的增加的分数,返回的是增加后的分数</li>
+<li>语法:zcount key min max</li>
+<li>返回分数范围内的成员数量</li>
+<li>语法:zrank key member</li>
+<li>返回成员在集合中的排名索引(正序)</li>
+<li>语法:zrevrank key member</li>
+<li>返回成员在集合中的排名索引(倒序)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>通用Redis命令</p>
+<p>redis有五种数据类型,String,hash,list,set,有序set</p>
+<ul>
+<li>语法keys pattern:<ul>
+<li>查询key长度为4位的key名<ul>
+<li>keys ????</li>
+</ul>
+</li>
+<li>查询所有key名<ul>
+<li>keys *</li>
+</ul>
+</li>
+<li>查询key名中包含name的key<ul>
+<li>keys * name*</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>语法del key1 key2..<ul>
+<li>删除name1和name2两个key<ul>
+<li>del name1 name2’</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>语法exists key<ul>
+<li>判断name1是否存在<ul>
+<li>exists name</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>语法:rename key newkey<ul>
+<li>为name重命名name1<ul>
+<li>rename name name1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>语法:type key<ul>
+<li>获取key的值的数据类型(五种)</li>
+</ul>
+</li>
+<li>语法:expire key<ul>
+<li>设置key生存时间,单位秒(默认永久存在)</li>
+</ul>
+</li>
+<li>语法:ttl key<ul>
+<li>获取该key剩余的生存时长,单位秒,如果为-1则为永久存在,如果 为0,redis会直接将key删除</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>扩展知识-消息订阅与发布</p>
+<ul>
+<li><p>消息订阅</p>
+<ul>
+<li>语法:subscribe channel<ul>
+<li>订阅频道</li>
+</ul>
+</li>
+<li>语法:psubscribe channel *<ul>
+<li>批量订阅频道(订阅以s开头的频道:psubscribe s*)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>消息发布</p>
+<ul>
+<li>publish channel content<ul>
+<li>在频道channel发布content消息</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>扩展知识-多数据库</p>
+<ul>
+<li>MySQL数据库可以自己用语句自定义创建</li>
+<li>redis也是有数据库的,redis已经提前创建好了,默认有16个数据库,0…15,在redis上所做的所有数据操作,默认在0号数据中操作的,数据库和数据库之间不能共享键值对</li>
+<li>切换数据库<ul>
+<li>语法:select 数据库名</li>
+</ul>
+</li>
+<li>把某个键值对进行数据库移植<ul>
+<li>语法:move key 数据库名</li>
+</ul>
+</li>
+<li>当前数据库的清空<ul>
+<li>语法:flushdb</li>
+</ul>
+</li>
+<li>清空redis服务器的数据<ul>
+<li>语法:flushall</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>扩展知识-redis<strong>批量操作</strong>-事务</p>
+<ul>
+<li>mysql-事务:目的是为了保证数据完整性和安全</li>
+<li>redis-事务:目的为了进行redis语句的批量化执行<ul>
+<li>multi:开启事务用于标记事务的开始,之后执行的命令都将被存入命令队列,直到执行exec时这些命令才会被原子的执行,类似于关系型数据库中的begin transaction</li>
+<li>exec:提交事务,类似于关系型数据库中的commit</li>
+<li>discard:事务回滚,类似于关系型数据库中的rollback</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>服务器命令</p>
+<ul>
+<li>ping命令<ul>
+<li>测试连接是否存活</li>
+</ul>
+</li>
+<li>echo命令<ul>
+<li>在命令行窗口打印一些内容</li>
+</ul>
+</li>
+<li>select命令<ul>
+<li>选择切换数据库</li>
+</ul>
+</li>
+<li>quit命令<ul>
+<li>退出客户端类似ctrl+c</li>
+</ul>
+</li>
+<li>dbsize命令<ul>
+<li>返回当前数据库中key的数目</li>
+</ul>
+</li>
+<li>info命令<ul>
+<li>查看redis配置信息</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>扩展知识-redis持久化</p>
+<ul>
+<li>关系型数据库持久化:任何增删改语句,都是在硬盘上做操作,断电后,因公安的数据还是存在</li>
+<li>非关系型数据库redis持久化:默认情况下,所有的增删改,数据都是在内存中进行操作的,断电以后内存中的数据会丢失,redis的部分数据会丢失,丢失的数据是保存在内存中的数据</li>
+<li>redis持久化操作<ul>
+<li>RDB持久化策略:默认持久化操作<ul>
+<li>RDB相当于照快照(随时随地启动,会占用一部分系统资源),保存的是一种状态,优点是:快照保存数据速度极快,还原数据速度极快,适用于灾难备份 .缺点是:RDB机制符合要求就会照快照,服务器正常关闭时照快照,key满足一定条件,照快照,小内存机器不适合使用</li>
+<li>RDB什么时候进行照快照<ul>
+<li>服务器正常关闭时 ./bin/redis-cli shutdown</li>
+<li>key满足一定条件 <ul>
+<li>save 900 1 (每900秒至少有一个key发生变化)</li>
+<li>save 300 10 ( 每300秒至少有10个key发生变化)</li>
+<li>save 60 10000 (每30秒)至少有10000个key发生变化</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>AOF持久化策略<ul>
+<li>使用日志功能保存数据操作,适用于内存比较小的计算机</li>
+<li>默认AOF机制是关闭的<ul>
+<li>不同步:不进行任何持久化操作</li>
+<li>每秒同步:每秒进行一次AOF保存数据</li>
+<li>每修改同步:只要进行key的变化语句,就进行AOF保存数据</li>
+</ul>
+</li>
+<li>AOF操作:<ul>
+<li>只会保存导致key变化的语句</li>
+</ul>
+</li>
+<li>AOF配置<ul>
+<li>开启AOF策略 :更改配置文件appendonly yes</li>
+<li>always:每次有数据修改发生时都会写入AOF文件</li>
+<li>everysec:每秒钟同步一次.该策略为AOF的缺省策略</li>
+<li>no:从不同步 </li>
+</ul>
+</li>
+<li>优点:持续性占用极少量的内存资源</li>
+<li>缺点:日志文件会特别大</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>jedis(java操作redis数据库技术)</p>
+<p>redis有什么命令,jedis就有什么方法</p>
+<ul>
+<li><p>单实例连接对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">        Jedis jedis = <span class="keyword">new</span> Jedis(<span class="string">"192.168.243.128"</span>, <span class="number">6379</span>);</span><br><span class="line">        jedis.set(<span class="string">"name"</span>,<span class="string">"张三"</span>);</span><br><span class="line">        System.out.println(jedis.get(<span class="string">"name"</span>));</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
 
+
+</li>
+</ul>
+</li>
+</ol>
+<pre><code>- 连接池连接
+
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test2</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//设置连接池的配置对象</span></span><br><span class="line">        JedisPoolConfig jedisPoolConfig = <span class="keyword">new</span> JedisPoolConfig();</span><br><span class="line">        <span class="comment">//设置池中最大连接数</span></span><br><span class="line">        jedisPoolConfig.setMaxTotal(<span class="number">50</span>);</span><br><span class="line">        <span class="comment">//设置空闲时间池中保有的最大连接数</span></span><br><span class="line">        jedisPoolConfig.setMaxIdle(<span class="number">10</span>);</span><br><span class="line">        <span class="comment">//设置连接池对象</span></span><br><span class="line">        JedisPool pool = <span class="keyword">new</span> JedisPool(jedisPoolConfig, <span class="string">"192.168.243.128"</span>, <span class="number">6379</span>);</span><br><span class="line">        <span class="comment">//从池中获取连接对象</span></span><br><span class="line">        Jedis jedis = pool.getResource();</span><br><span class="line">        System.out.println(jedis.get(<span class="string">"name"</span>));</span><br><span class="line">        <span class="comment">//连接归还给池中</span></span><br><span class="line">        jedis.close();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+- 连接池连接工具类
+
+  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">jedisUtil</span> </span>&#123;</span><br><span class="line">    <span class="comment">//定义一个连接池对象</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">static</span> JedisPool POOL;</span><br><span class="line">    <span class="comment">//初始化POOL</span></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        <span class="comment">//设置连接池的配置对象</span></span><br><span class="line">        JedisPoolConfig jedisPoolConfig = <span class="keyword">new</span> JedisPoolConfig();</span><br><span class="line">        <span class="comment">//设置池中最大连接数</span></span><br><span class="line">        jedisPoolConfig.setMaxTotal(<span class="number">50</span>);</span><br><span class="line">        <span class="comment">//设置空闲时间池中保有的最大连接数</span></span><br><span class="line">        jedisPoolConfig.setMaxIdle(<span class="number">10</span>);</span><br><span class="line">        <span class="comment">//设置连接池对象</span></span><br><span class="line">        POOL = <span class="keyword">new</span> JedisPool(jedisPoolConfig, <span class="string">"192.168.243.128"</span>, <span class="number">6379</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//从池中获取连接</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Jedis <span class="title">getJedis</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> POOL.getResource();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></code></pre>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/05/Redis/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/05/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2020-04-04T16:08:12.695Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-05</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/04/05/springboot+redis%E7%BC%93%E5%AD%98/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          springboot+redis缓存
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/04/05/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">面试笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/05/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/">面试笔记</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/04/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-04-04T14:48:37.248Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/04/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/">测试博客</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -311,8 +827,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

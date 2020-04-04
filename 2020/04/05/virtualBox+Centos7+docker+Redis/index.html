@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/4 | CodeLiu的博客</title>
+  <title>virtualBox+Centos7+docker+Redis | CodeLiu的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java小白">
-<meta property="og:type" content="website">
-<meta property="og:title" content="CodeLiu的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2020/04/index.html">
+  <meta name="description" content="virtualBox+Centos7+docker+Redis安装virtualBox，导入centos7.ova镜像文件xShell远程连接工具虚拟机设置网络为桥接，ip addr 命令查看虚拟机ip连接工具设置主机为虚拟机ip，端口默认22连接成功安装docker查看内核版本：uname -r更新内核版本：yum update安装docker：yum install docker启动docke">
+<meta property="og:type" content="article">
+<meta property="og:title" content="virtualBox+Centos7+docker+Redis">
+<meta property="og:url" content="http://yoursite.com/2020/04/05/virtualBox+Centos7+docker+Redis/index.html">
 <meta property="og:site_name" content="CodeLiu的博客">
-<meta property="og:description" content="Java小白">
+<meta property="og:description" content="virtualBox+Centos7+docker+Redis安装virtualBox，导入centos7.ova镜像文件xShell远程连接工具虚拟机设置网络为桥接，ip addr 命令查看虚拟机ip连接工具设置主机为虚拟机ip，端口默认22连接成功安装docker查看内核版本：uname -r更新内核版本：yum update安装docker：yum install docker启动docke">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-04T16:11:36.887Z">
+<meta property="article:modified_time" content="2020-04-04T16:10:16.121Z">
 <meta property="article:author" content="CodeLiu">
 <meta name="twitter:card" content="summary">
   
@@ -138,157 +140,166 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-virtualBox+Centos7+docker+Redis" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      virtualBox+Centos7+docker+Redis
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/05/virtualBox+Centos7+docker+Redis/" class="archive-article-date">
+
+        
+        <a href="/2020/04/05/virtualBox+Centos7+docker+Redis/" class="archive-article-date">
   	<time datetime="2020-04-04T16:11:36.887Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-05</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/05/virtualBox+Centos7+docker+Redis/">virtualBox+Centos7+docker+Redis</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="virtualBox-Centos7-docker-Redis"><a href="#virtualBox-Centos7-docker-Redis" class="headerlink" title="virtualBox+Centos7+docker+Redis"></a>virtualBox+Centos7+docker+Redis</h1><h2 id="安装virtualBox，导入centos7-ova镜像文件"><a href="#安装virtualBox，导入centos7-ova镜像文件" class="headerlink" title="安装virtualBox，导入centos7.ova镜像文件"></a>安装virtualBox，导入centos7.ova镜像文件</h2><h2 id="xShell远程连接工具"><a href="#xShell远程连接工具" class="headerlink" title="xShell远程连接工具"></a>xShell远程连接工具</h2><h3 id="虚拟机设置网络为桥接，ip-addr-命令查看虚拟机ip"><a href="#虚拟机设置网络为桥接，ip-addr-命令查看虚拟机ip" class="headerlink" title="虚拟机设置网络为桥接，ip addr 命令查看虚拟机ip"></a>虚拟机设置网络为桥接，ip addr 命令查看虚拟机ip</h3><h3 id="连接工具设置主机为虚拟机ip，端口默认22"><a href="#连接工具设置主机为虚拟机ip，端口默认22" class="headerlink" title="连接工具设置主机为虚拟机ip，端口默认22"></a>连接工具设置主机为虚拟机ip，端口默认22</h3><h3 id="连接成功"><a href="#连接成功" class="headerlink" title="连接成功"></a>连接成功</h3><h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><h3 id="查看内核版本：uname-r"><a href="#查看内核版本：uname-r" class="headerlink" title="查看内核版本：uname -r"></a>查看内核版本：uname -r</h3><h3 id="更新内核版本：yum-update"><a href="#更新内核版本：yum-update" class="headerlink" title="更新内核版本：yum update"></a>更新内核版本：yum update</h3><h3 id="安装docker：yum-install-docker"><a href="#安装docker：yum-install-docker" class="headerlink" title="安装docker：yum install docker"></a>安装docker：yum install docker</h3><h3 id="启动docker：systemctl-start-docker（如果启动docker失败，重启计算机重试，还是不行的话卸载docker重新安装，卸载命令自行百度）"><a href="#启动docker：systemctl-start-docker（如果启动docker失败，重启计算机重试，还是不行的话卸载docker重新安装，卸载命令自行百度）" class="headerlink" title="启动docker：systemctl start docker（如果启动docker失败，重启计算机重试，还是不行的话卸载docker重新安装，卸载命令自行百度）"></a>启动docker：systemctl start docker（如果启动docker失败，重启计算机重试，还是不行的话卸载docker重新安装，卸载命令自行百度）</h3><h3 id="设置docker为开机启动：systemctl-enable-docker"><a href="#设置docker为开机启动：systemctl-enable-docker" class="headerlink" title="设置docker为开机启动：systemctl enable docker"></a>设置docker为开机启动：systemctl enable docker</h3><h2 id="docker安装Redis"><a href="#docker安装Redis" class="headerlink" title="docker安装Redis"></a>docker安装Redis</h2><h3 id="查看redis镜像版本：docker-search-redis"><a href="#查看redis镜像版本：docker-search-redis" class="headerlink" title="查看redis镜像版本：docker search redis"></a>查看redis镜像版本：docker search redis</h3><h3 id="获取镜像：docker-pull-redis-latest"><a href="#获取镜像：docker-pull-redis-latest" class="headerlink" title="获取镜像：docker pull redis:latest"></a>获取镜像：docker pull redis:latest</h3><h3 id="查看docker安装的镜像：docker-images"><a href="#查看docker安装的镜像：docker-images" class="headerlink" title="查看docker安装的镜像：docker images"></a>查看docker安装的镜像：docker images</h3><h3 id="运行redis容器：docker-run-itd-–name-redis-test-p-6379-6379-redis"><a href="#运行redis容器：docker-run-itd-–name-redis-test-p-6379-6379-redis" class="headerlink" title="运行redis容器：docker run -itd –name redis-test -p 6379:6379 redis"></a>运行redis容器：docker run -itd –name redis-test -p 6379:6379 redis</h3><h3 id="测试redis服务：docker-exec-it-redis-test-bin-bash"><a href="#测试redis服务：docker-exec-it-redis-test-bin-bash" class="headerlink" title="测试redis服务：docker exec -it redis-test /bin/bash"></a>测试redis服务：docker exec -it redis-test /bin/bash</h3><h2 id="docker容器操作"><a href="#docker容器操作" class="headerlink" title="docker容器操作"></a>docker容器操作</h2><h3 id="查看运行中的容器：docker-ps"><a href="#查看运行中的容器：docker-ps" class="headerlink" title="查看运行中的容器：docker ps"></a>查看运行中的容器：docker ps</h3><h3 id="停止你当前运行中的容器：docker-stop-容器名或容器id"><a href="#停止你当前运行中的容器：docker-stop-容器名或容器id" class="headerlink" title="停止你当前运行中的容器：docker stop 容器名或容器id"></a>停止你当前运行中的容器：docker stop 容器名或容器id</h3><h3 id="启动容器：docker-start-容器名或容器id"><a href="#启动容器：docker-start-容器名或容器id" class="headerlink" title="启动容器：docker start 容器名或容器id"></a>启动容器：docker start 容器名或容器id</h3><h3 id="端口映射：-p-6379-6379"><a href="#端口映射：-p-6379-6379" class="headerlink" title="端口映射：-p 6379:6379"></a>端口映射：-p 6379:6379</h3><h3 id="容器日志：docker-logs-容器名或容器id"><a href="#容器日志：docker-logs-容器名或容器id" class="headerlink" title="容器日志：docker logs 容器名或容器id"></a>容器日志：docker logs 容器名或容器id</h3><p><em>XMind: ZEN - Trial Version</em></p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/05/virtualBox+Centos7+docker+Redis/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/05/springboot+redis%E7%BC%93%E5%AD%98/" class="archive-article-date">
-  	<time datetime="2020-04-04T16:11:36.884Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-05</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/05/springboot+redis%E7%BC%93%E5%AD%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">springboot+redis缓存</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/05/springboot+redis%E7%BC%93%E5%AD%98/">springboot+redis缓存</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/05/Redis/" class="archive-article-date">
-  	<time datetime="2020-04-04T16:11:36.882Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/05/Redis/">Redis</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/05/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-  	<time datetime="2020-04-04T16:08:12.695Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/05/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AE%B0/">面试笔记</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/04/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-04-04T14:48:37.248Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/04/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/">测试博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -311,8 +322,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
